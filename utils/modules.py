@@ -1,16 +1,34 @@
-#Description: "Start a new chat with a user"
+# Description: "Create a new Assistant"
+
+def create_assistant(client, name, description, instructions, tools=[], model="gpt-3.5-turbo-1106"):
+    assistant = client.beta.assistants.create(
+    name=name,
+    description=description,
+    instructions=instructions,
+    tools=tools,
+    model=model
+    )
+    return assistant
+
+# Description: "Get an already made assistant"
+
+def get_assistant(client):
+    assistant = client.beta.assistants.retrieve("asst_n14fsD7ddyPgc4h3ee2wbnW1")
+    return assistant
+
+# Description: "Start a new chat with a user"
 
 def start_new_chat(client):
     empty_thread = client.beta.threads.create()
     return empty_thread
 
-# Retrieve previous chat/Thread
+# Description: Retrieve previous chat/Thread
 
 def get_chat(client, thread_id):
     thread = client.beta.threads.retrieve(thread_id)
     return thread
 
-#Description: "Add a message to a chat/Thread" 
+# Description: "Add a message to a chat/Thread" 
 
 def add_message(client, thread, content):
     thread_message = client.beta.threads.messages.create(
