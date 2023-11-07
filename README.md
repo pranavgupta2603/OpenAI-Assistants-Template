@@ -27,7 +27,7 @@ Explore the `OpenAI-Assistant-Template.ipynb` for a hands-on experience that wal
 Dive into `modules.py` to find utility functions and classes that provide a cleaner and more maintainable codebase, making it easier to build upon.
 
 ## Utility Functions in `modules.py` 🧰
-- `create_assistant(client, name, description, instructions, tools=[], model="gpt-3.5-turbo-1106")`: Create a new Assistant
+- `create_assistant(client, name, description, instructions, tools=[], model="")`: Create a new Assistant
 - `get_assistant(client, assistant_id)`: Retrieve an existing assistant using an assistant ID.
 - `start_new_chat(client)`: Start a new conversation with the AI assistant.
 - `get_chat(client, thread_id)`: Retrieve an existing conversation using a thread ID.
