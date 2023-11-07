@@ -12,8 +12,8 @@ def create_assistant(client, name, description, instructions, tools=[], model="g
 
 # Description: "Get an already made assistant"
 
-def get_assistant(client):
-    assistant = client.beta.assistants.retrieve("asst_n14fsD7ddyPgc4h3ee2wbnW1")
+def get_assistant(client, assistant_id):
+    assistant = client.beta.assistants.retrieve(assistant_id)
     return assistant
 
 # Description: "Start a new chat with a user"
