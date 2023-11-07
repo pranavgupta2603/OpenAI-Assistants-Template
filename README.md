@@ -1,1 +1,2 @@
-# Tutorial of OpenAI's Assistant API.
+# Tutorial of OpenAI's Assistant API
+
