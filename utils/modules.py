@@ -50,3 +50,17 @@ def run_chat(client, thread, assistant):
     assistant_id=assistant.id,
     )
     return run
+
+# Description: "Display the chat messages"
+def display_chat_messages(messages):
+    for message in messages:
+        role = message.role.upper()
+        content = message.content[0].text.value
+        formatted_message = f"{role}: {content}"
+
+        if role == "USER":
+            # Display user messages in markdown cells (add formatting if required)
+            display(Markdown(f"{formatted_message}"))
+        else:
+            # Display assistant messages in markdown cells (add formatting if required)
+            display(Markdown(f"{formatted_message}"))
